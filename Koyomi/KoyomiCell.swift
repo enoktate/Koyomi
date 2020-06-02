@@ -220,7 +220,7 @@ private extension KoyomiCell {
     }
     
     func configureCircularView() {
-        let diameter = bounds.width * circularViewDiameter
+        let diameter = min(bounds.width, bounds.height) * circularViewDiameter
         circularView.frame = CGRect(x: (bounds.width - diameter) / 2, y: (bounds.height - diameter) / 2, width: diameter, height: diameter)
         circularView.layer.cornerRadius = diameter / 2
     }
